@@ -4,27 +4,32 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import './App.css';
 
 import Navigation from './components/Navigation'
 import Home from './pages/Home'
+import SingleItem from './pages/SingleItem'
 
 
 function App() {
   return (
     <Router>
       <Navigation />
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/users">
-          <Users />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/item/:id">
+            <SingleItem />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }

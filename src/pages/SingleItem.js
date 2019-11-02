@@ -12,9 +12,12 @@ const SingleItem = () => {
 
   return (
     <div>
-      <h1>{data.title}</h1>
-      <p>submitted by {data.user} {data.time_ago}</p>
-      <Comment comment={data} />
+      {loading ? <h1>Loading comments...</h1> :
+        <>
+          <h1>{data.title}</h1>
+          <p>submitted by {data.user} {data.time_ago}</p>
+          <Comment comment={data} />
+        </>}
     </div>
   )
 }

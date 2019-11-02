@@ -7,6 +7,8 @@ import {
 import './App.css';
 
 import Navigation from './components/Navigation'
+import Home from './pages/Home'
+
 
 function App() {
   return (
@@ -29,10 +31,6 @@ function App() {
 
 export default App;
 
-
-function Home() {
-  return <h2>Home</h2>;
-}
 
 function About() {
   return <h2>About</h2>;

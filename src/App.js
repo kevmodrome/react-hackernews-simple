@@ -16,12 +16,6 @@ function App() {
       <Navigation />
       <div style={{ maxWidth: '700px', margin: '0 auto' }}>
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
           <Route path="/item/:id">
             <SingleItem />
           </Route>
@@ -35,12 +29,3 @@ function App() {
 }
 
 export default App;
-
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
